@@ -1,1 +1,13 @@
-
+CH2
+2.1 
+  3600
+2.2
+  seconds_per_hour=60*60
+2.3
+  print seconds_per_hour
+2.4
+  second_per_day=60*60*24
+2.5
+  second_per_day/seconds_per_hour
+2.6
+  the same
