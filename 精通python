@@ -11,3 +11,41 @@ CH2
   second_per_day/seconds_per_hour
 2.6
   the same
+  
+CH3
+3.1
+  years_list=[1994,1995,1996,1997,1998,1999]
+3.2
+  1997
+3.3
+  1999
+3.4
+  things=['mozzarella','cin derella','salmonella']
+3.5
+  NO
+3.6
+  things=['MOZZARELLA','CIN DERELLA','SALMONELLA']
+  print things
+3.7
+  things=['MOZZARELLA','CIN DERELLA','SALMONELLA']
+  del things[-2]
+  things.insert(2,'Nobel Prize')
+  print things
+3.8
+  surprise=['Groucho','Chico','Harpo']
+3.9
+  surprise=['Groucho','Chico','Harpo']
+3.10
+  surprise=['Groucho','Chico','harpO']
+3.11
+  e2f={"dog":"chien"
+	 "cat":"chat"
+	 "walrus":"morse"}
+3.12
+  print e2f['walrus']
+3.13
+3.14
+3.15
+3.16
+3.17
+3.18
