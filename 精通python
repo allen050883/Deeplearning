@@ -8,41 +8,44 @@ CH2
 2.4
   second_per_day=60*60*24
 2.5
-  second_per_day/seconds_per_hour
+  second_per_day/seconds_per_hour=24.0
 2.6
-  the same
+  24
   
 CH3
 3.1
   years_list=[1994,1995,1996,1997,1998,1999]
 3.2
-  1997
+  year_list[3]
 3.3
-  1999
+  year_list[-1]
 3.4
   things=['mozzarella','cin derella','salmonella']
 3.5
+  print things[1].capitalize()
   NO
+  print things[1]=things[1].capitalize()
 3.6
-  things=['MOZZARELLA','CIN DERELLA','SALMONELLA']
+  things[0]=things[0].upper()
   print things
 3.7
-  things=['MOZZARELLA','CIN DERELLA','SALMONELLA']
-  del things[-2]
-  things.insert(2,'Nobel Prize')
+  things.remove('salmonella')  #del things[-1]   or   del things[2]
   print things
 3.8
   surprise=['Groucho','Chico','Harpo']
+  print surprise
 3.9
   surprise=['Groucho','Chico','Harpo']
+  surprise[-1]=surprise[-1].lower()
+  surprise[-1]=surprise[-1][::-1]
+  surprise[-1]=surprise[-1].capitalize()
+  print surprise
 3.10
-  surprise=['Groucho','Chico','harpO']
+  e2f={"dog":"chien", "cat":"chat", "walrus":"morse"}
 3.11
-  e2f={"dog":"chien"
-	 "cat":"chat"
-	 "walrus":"morse"}
-3.12
   print e2f['walrus']
+3.12
+  
 3.13
 3.14
 3.15
