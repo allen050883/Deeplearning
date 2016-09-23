@@ -45,10 +45,45 @@ CH3
 3.11
   print e2f['walrus']
 3.12
-  
+  e2f={'dog':'chien','cat':'chat','walrus':'morse'}
+  f2e={}
+  for english, french in e2f.items():
+	  f2e[french]=english
+  print(f2e)
 3.13
+  print(f2e['chien'])
 3.14
-3.15
+  print(e2f.keys())
+3.15(bug)
+  life={
+	'animals':{
+		'cat':{[
+			'Herni','Grumpy','Lucy'
+			],
+		'octopi':{},
+		'emus':{}
+		},
+	'plants':{},
+	'other':{}
+	}
+  print(life)
 3.16
+  print(life.keys())
 3.17
+  print(life['animals'].keys()])
 3.18
+  print(life['animals']['cats'])
+  
+  CH4
+4.1
+4.2
+4.3
+4.4
+4.5
+4.6
+4.7
+4.8
+4.9
+4.10
+4.11
+4.12
