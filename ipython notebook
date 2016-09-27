@@ -1,1 +1,10 @@
+先安裝python2  
+python3也可一起裝  記得需要加到路徑 
+
+開啟cmd
+pip3 install jupyter
+
+以後在cmd只需輸入
+ipython notebook
+
 http://cs231n.github.io/ipython-tutorial/
