@@ -109,7 +109,8 @@ while True:
   odd={number for number in range(10) if number%2==1}
   print(odd)
 4.7
-  
+  for thing in ('Got %s' % number for number in range(10)):
+    print(thing)
 4.8
   def good():
 	return ["Harry","Ron","Hermione"]
@@ -126,7 +127,7 @@ while True:
   def test(func):
 	def new_func(*args, **kwargs):
 		print("start")
-		result=func(*args,**kwargs)
+		result=func(*args,**kwargs)  #輸出tuple,輸出字典形式
 		print("end")
 		return result
 	return new_func
@@ -134,8 +135,41 @@ while True:
   @test
   def greeting():
 	print("Greetings, Earthling")
-	
   print(greeting())
 4.11
-
+  for thing in ('Got %s' % number for number in range(10)):
+    print(thing)
 4.12
+  titles=['Creature of Habit', 'Crewrl Fate']
+  plots=['A nun turns into a monster','A haunted yarn shop']
+  movies=dict(zip(titles,plots))
+  movies
+  
+  CH5
+ 5.1
+  import zoo
+  zoo.hours()
+ 5.2
+   import zoo as menagerie
+   menagerie.hours()
+ 5.3
+   from zoo import hours 
+   hours()
+ 5.4
+   from zoo import hours as info
+   info()
+ 5.5
+   plain={'a':'1','b':'2','c':'3'}
+   plain
+ 5.6
+   from collections import OrderedDict
+   fancy=OrderedDict([('a',1),('b',2),('c',3)])
+   fancy
+ 5.7
+   from collections import defaultdict
+   dict_of_lists=defaultdict(list)
+   dict_of_lists['a'].append('something for a')
+   dict_of_lists['a']
+   
+  CH6
+ 
