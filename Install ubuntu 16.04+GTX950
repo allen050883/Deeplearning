@@ -185,7 +185,25 @@ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY
 
 
 
-<last step>
-最後測試：
+<step 7>
+測試：
 nvidia-smi
 假如沒有出現no command line，代表成功
+
+
+
+
+<step 8>
+下載 cudnn v5.1(需要先申請會員得以下載)
+解壓縮  tar xvzf cudnn-8.0-linux-x64-v4.tgz
+sudo cp cuda/cudnn.h /usr/local/cuda/include
+sudo cp cuda/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
+sudo pip install tensorflow-gpu
+
+
+
+
+備註：實作時，在terminal需要先打此行指令
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda-8.0/lib64"
+
