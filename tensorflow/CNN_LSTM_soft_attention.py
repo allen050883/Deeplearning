@@ -1,3 +1,4 @@
+#Reference: https://github.com/Kyushik/Attention/blob/master/Soft_Attention_MNIST.ipynb
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
