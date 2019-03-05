@@ -5,7 +5,7 @@
 3. Instance Normalization: S = {K | K = (N, C)} --> calculate (H, W) to share on (N, C)  
 
 ## CNN attention
-self-attention in CNN
+self-attention in CNN (Notice: cost lots of memory!!)
 
 ## Reference  
 1. WU, Yuxin; HE, Kaiming. Group normalization. arXiv preprint arXiv:1803.08494, 2018.
