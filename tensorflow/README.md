@@ -15,6 +15,11 @@ add coordinate information to model
 1. find the high scale image and low scale image of information
 2. using resiudal network and deconvolution to combine them
 
+## 5. Update model parameters with accumulated gradients  
+Theoretically, when calculating gradients in back propagation, it always updates parameters by 1 training data.  
+Therefore, in order to make program execution more efficient, we accumulate gradients and update at once.  
+
+
 ## Reference  
 1. WU, Yuxin; HE, Kaiming. Group normalization. arXiv preprint arXiv:1803.08494, 2018.  
 2. ZHANG, Han, et al. Self-attention generative adversarial networks. arXiv preprint arXiv:1805.08318, 2018.  
