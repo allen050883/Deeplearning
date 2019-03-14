@@ -26,3 +26,6 @@ Therefore, in order to make program execution more efficient, we accumulate grad
 3. An Intriguing Failing of Convolutional Neural Networks and the CoordConv Solution
 LIU, Rosanne, et al. An intriguing failing of convolutional neural networks and the coordconv solution. In: Advances in Neural Information Processing Systems. 2018. p. 9627-9638.  
 4. LIN, Tsung-Yi, et al. Feature pyramid networks for object detection. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017. p. 2117-2125.  
+5. accumulated gradients  
+https://stackoverflow.com/questions/42156957/how-to-update-model-parameters-with-accumulated-gradients  
+
