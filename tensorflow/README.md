@@ -18,7 +18,9 @@ add coordinate information to model
 ## 5. Update model parameters with accumulated gradients  
 Theoretically, when calculating gradients in back propagation, it always updates parameters by 1 training data.  
 Therefore, in order to make program execution more efficient, we accumulate gradients and update at once.  
-
+  
+## 6. Google Inception-v3
+write by myself
 
 ## Reference  
 1. WU, Yuxin; HE, Kaiming. Group normalization. arXiv preprint arXiv:1803.08494, 2018.  
@@ -28,4 +30,5 @@ LIU, Rosanne, et al. An intriguing failing of convolutional neural networks and 
 4. LIN, Tsung-Yi, et al. Feature pyramid networks for object detection. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017. p. 2117-2125.  
 5. accumulated gradients  
 https://stackoverflow.com/questions/42156957/how-to-update-model-parameters-with-accumulated-gradients  
+6. SZEGEDY, Christian, et al. Rethinking the inception architecture for computer vision. In: Proceedings of the IEEE conference on computer vision and pattern recognition. 2016. p. 2818-2826.  
 
