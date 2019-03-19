@@ -22,6 +22,9 @@ Therefore, in order to make program execution more efficient, we accumulate grad
 ## 6. Google Inception-v3
 write by myself
 
+## 7. Hourglass Network  
+The Latest paper is for gazeML. Using three 4-level hourglass modules finds many places(cordinates) in eyes. Therefore, we use this structure on detect very small 
+
 ## Reference  
 1. WU, Yuxin; HE, Kaiming. Group normalization. arXiv preprint arXiv:1803.08494, 2018.  
 2. ZHANG, Han, et al. Self-attention generative adversarial networks. arXiv preprint arXiv:1805.08318, 2018.  
@@ -31,4 +34,5 @@ LIU, Rosanne, et al. An intriguing failing of convolutional neural networks and 
 5. accumulated gradients  
 https://stackoverflow.com/questions/42156957/how-to-update-model-parameters-with-accumulated-gradients  
 6. SZEGEDY, Christian, et al. Rethinking the inception architecture for computer vision. In: Proceedings of the IEEE conference on computer vision and pattern recognition. 2016. p. 2818-2826.  
+7. NEWELL, Alejandro; YANG, Kaiyu; DENG, Jia. Stacked hourglass networks for human pose estimation. In: European Conference on Computer Vision. Springer, Cham, 2016. p. 483-499.  
 
