@@ -1,0 +1,33 @@
+#retrieved from
+"""
+CHEN, Yunpeng, et al. Drop an Octave: Reducing Spatial Redundancy in Convolutional Neural Networks with Octave Convolution. arXiv preprint arXiv:1904.05049, 2019.
+"""
+import tensorflow as tf
+
+def octave_conv(T, filter_num_out, kernel_size, alpha_in, alpha_out):
+    L_in = T[:,:,:,: int(alpha_in * int(T.shape[3]))]
+    L_in = tf.image.resize_images(L_in, (int(int(T.shape[1])/2), int(int(T.shape[2])/2)), method = 0)
+    
+    H_in = T[:,:,:, int(alpha_in * int(T.shape[3])):]
+    
+    #filter num of Low and High frequency
+    L_out = int(alpha_out * filter_num_out)
+    H_out = filter_num_out- int(alpha_out * filter_num_out)
+    
+    L2L = tf.layers.conv2d(L_in, L_out, kernel_size, 1, 'same')
+    H2H = tf.layers.conv2d(H_in, H_out, kernel_size, 1, 'same')
+    
+    L2H = tf.layers.conv2d_transpose(L_in, H_out, kernel_size, 2, 'same')
+    H2L = tf.layers.average_pooling2d(H_in, kernel_size, 2, 'same')
+    H2L = tf.layers.conv2d(H2L, L_out, kernel_size, 1, 'same')
+    
+    H = H2H + L2H
+    L = L2L + H2L
+    
+    T_output = tf.concat([ tf.image.resize_nearest_neighbor(L, [L.shape[1]*2, L.shape[2]*2]) , H], axis = -1)
+    
+    return T_output
+
+T = tf.zeros([10, 14, 14, 1024])
+T_ = octave_conv(T, 2048, 3, 0, 0.5)
+print(T_.shape)
