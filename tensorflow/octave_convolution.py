@@ -24,10 +24,9 @@ def octave_conv(T, filter_num_out, kernel_size, alpha_in, alpha_out):
     H = H2H + L2H
     L = L2L + H2L
     
-    T_output = tf.concat([ tf.image.resize_nearest_neighbor(L, [L.shape[1]*2, L.shape[2]*2]) , H], axis = -1)
-    
-    return T_output
+    return H, L
 
 T = tf.zeros([10, 14, 14, 1024])
-T_ = octave_conv(T, 2048, 3, 0, 0.5)
-print(T_.shape)
+H, L = octave_conv(T, 2048, 3, 0.5, 0.5)
+print(H.shape)
+print(L.shape)
