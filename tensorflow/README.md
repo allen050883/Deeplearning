@@ -25,7 +25,7 @@ write by myself
 ## 7. Hourglass Network  
 The Latest paper is for gazeML. Using three 4-level hourglass modules finds many places(cordinates) in eyes. Therefore, we use this structure on detect very small 
 
-## 8. Octave convolution  
+## 8. Octave Convolution  
 You should find your alpha_in and alpha_out to suit your dataset because the low and high frequency features in the image needs to be exchanged their information.  
   
 ## Reference  
