@@ -1,7 +1,3 @@
-#retrieved from
-"""
-CHEN, Yunpeng, et al. Drop an Octave: Reducing Spatial Redundancy in Convolutional Neural Networks with Octave Convolution. arXiv preprint arXiv:1904.05049, 2019.
-"""
 import tensorflow as tf
 
 def octave_conv(T, filter_num_out, kernel_size, alpha_in, alpha_out):
