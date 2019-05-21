@@ -11,6 +11,25 @@ def Attention(Q, K, name='att'):
 
     return tf.reshape(attention, tf.shape(Q)) * tf.nn.sigmoid(gamma) + Q * tf.nn.sigmoid(1 - gamma) # V
 
+def Spatial_attention(Q, K, compression_channel_no = 16, name = 'satt'):
+
+    # the query and key can be firstly transform to the same channel (This can also compress the information).
+    Qm = tf.layers.conv2d(Q, compression_channel_no, [1,1], [1,1], padding="SAME", activation=tf.nn.elu, kernel_initializer=tf.keras.initializers.orthogonal(), name=name+'att_compressionQ')
+    Km = tf.layers.conv2d(K, compression_channel_no, [1,1], [1,1], padding="SAME", activation=tf.nn.elu, kernel_initializer=tf.keras.initializers.orthogonal(), name=name+'att_compressionK')
+    V  = tf.layers.conv2d(K, Q.shape[3].value, [1,1], [1,1], padding="SAME", activation=tf.nn.elu, kernel_initializer=tf.keras.initializers.orthogonal(), name=name+'att_V')
+    
+    Qf = tf.reshape(Qm, [-1, Qm.shape[1].value * Qm.shape[2].value, compression_channel_no])
+    Kf = tf.reshape(Km, [-1, Km.shape[1].value * Km.shape[2].value, compression_channel_no])
+    Vf = tf.reshape(V, [-1,  V.shape[1].value  * V.shape[2].value, Q.shape[3].value])
+    
+    attention_map = tf.matmul(Qf, Kf, transpose_b=True)  # [bs, N, N]
+    attention_map = tf.nn.softmax(attention_map, axis=1) # consider only the keys for attention
+    attention = tf.matmul(attention_map, Vf)
+    
+    gamma = tf.get_variable(name+"satt_gamma", [1], initializer=tf.constant_initializer(0.0)) # set the gamma as learnable variable
+    return tf.reshape(attention, tf.shape(Q)) * tf.nn.sigmoid(gamma) + Q * tf.nn.sigmoid(1 - gamma) 
+
+
 # use difference source and target 
 S = tf.zeros([10, 28, 28, 3])
 T = tf.zeros([10, 14, 14, 1024])
@@ -19,4 +38,10 @@ print(A) # output should have the same shape of T (10, 14, 14, 1024)
 
 # puting self as two inputs will be self-attention
 A = Attention(T, T, 'att2')
+print(A)
+
+#spatial attention
+S = tf.placeholder(tf.float32, [None,28,28,3])
+T = tf.placeholder(tf.float32, [None,10,10,1024])
+A = Spatial_attention(T,S) #(None, 10, 10, 1024)
 print(A)
