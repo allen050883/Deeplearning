@@ -31,6 +31,9 @@ You should find your alpha_in and alpha_out to suit your dataset because the low
 ## 9. Variational Autoencoder  
 Side project on USA cartoon. In the code, this model can use softmax to make 0 ~ 255 which transfered into 8 bits to be 0 or 1. (And do not scale anything image). Then, if I want to get style tranfering, it shuould not add encoder to decoder.    
   
+## 10. Test tensorflow pb file. Inference with only pb file.
+Test on Mnist and create pb file. Inference pb file to find the right variable. Add "<variable>:0" with can be used friendly.  
+  
 ## Reference  
 1. WU, Yuxin; HE, Kaiming. Group normalization. arXiv preprint arXiv:1803.08494, 2018.  
 2. ZHANG, Han, et al. Self-attention generative adversarial networks. arXiv preprint arXiv:1805.08318, 2018.  
