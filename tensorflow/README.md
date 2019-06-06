@@ -34,6 +34,7 @@ Side project on USA cartoon. In the code, this model can use softmax to make 0 ~
 ## 10. Test tensorflow pb file. Inference with only pb file.
 Test on Mnist and create pb file. Inference pb file to find the right variable. Add "<variable>:0" with can be used friendly.  
   
+  
 ## Reference  
 1. WU, Yuxin; HE, Kaiming. Group normalization. arXiv preprint arXiv:1803.08494, 2018.  
 2. ZHANG, Han, et al. Self-attention generative adversarial networks. arXiv preprint arXiv:1805.08318, 2018.  
@@ -46,5 +47,6 @@ https://stackoverflow.com/questions/42156957/how-to-update-model-parameters-with
 7. NEWELL, Alejandro; YANG, Kaiyu; DENG, Jia. Stacked hourglass networks for human pose estimation. In: European Conference on Computer Vision. Springer, Cham, 2016. p. 483-499.  
 8. CHEN, Yunpeng, et al. Drop an Octave: Reducing Spatial Redundancy in Convolutional Neural Networks with Octave Convolution. arXiv preprint arXiv:1904.05049, 2019.  
 9. KINGMA, Diederik P.; WELLING, Max. Auto-encoding variational bayes. arXiv preprint arXiv:1312.6114, 2013.  
+10. tensorflow pb and inference. https://blog.csdn.net/u014432647/article/details/75276718  
 
 
