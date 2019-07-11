@@ -18,7 +18,7 @@ class CoordConv2D:
             'padding': padding,
             'activation': activation,
             'kernel_initializer': kernel_initializer,
-            'name': name
+            'name': name,
         }
 
     def __call__(self, in_tensor):
@@ -59,4 +59,5 @@ class CoordConv2D:
                 rr = tf.sqrt(tf.add(tf.square(xx_indices - 0.5), tf.square(yy_indices - 0.5)))
                 processed_tensor = tf.concat([processed_tensor, rr], axis=-1)
 
-            return tf.layers.conv2d(processed_tensor, **self.conv_kwargs)
+            return tf.keras.layers.Conv2D(**self.conv_kwargs)(processed_tensor)
+		
