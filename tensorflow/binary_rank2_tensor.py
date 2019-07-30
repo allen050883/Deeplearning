@@ -18,3 +18,5 @@ with tf.Session() as sess:
     img_1 = tf.mod(tf.bitwise.right_shift(tf.expand_dims(img_1, -1), tf.range(8)), 2)
     img_1 = img_1.eval()
     img = img.eval()
+
+img_2 = img_1.dot(1 << np.arange(img_1.shape[-1]))
