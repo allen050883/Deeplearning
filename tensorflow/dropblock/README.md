@@ -1,3 +1,4 @@
+```python
 #The methods to use dropblock and result
 import os
 import cv2
@@ -32,3 +33,4 @@ with tf.Session() as sess:
 cv2.imwrite('im1.jpg', im1)
 cv2.imwrite('im2.jpg', im2)
 cv2.imwrite('im3.jpg', im3)
+```
