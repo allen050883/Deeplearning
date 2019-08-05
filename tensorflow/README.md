@@ -34,6 +34,10 @@ Side project on USA cartoon. In the code, this model can use softmax to make 0 ~
 ## 10. Test tensorflow pb file. Inference with only pb file.
 Test on Mnist and create pb file. Inference pb file to find the right variable. Add "<variable>:0" with can be used friendly.  
   
+## 11. DropBlock  
+The dropblock can also use in preprocessing to be the denoise network, and there are three types: dropblock(black), dropblock_white, and dropblock_gray. However, there are some notices.  
+1. dropblock_white should not balanced weight in the last step.  
+2. dropblock_gray shuould be scaled into -1 ~ 1 first.
   
 ## Reference  
 1. WU, Yuxin; HE, Kaiming. Group normalization. arXiv preprint arXiv:1803.08494, 2018.  
@@ -48,5 +52,6 @@ https://stackoverflow.com/questions/42156957/how-to-update-model-parameters-with
 8. CHEN, Yunpeng, et al. Drop an Octave: Reducing Spatial Redundancy in Convolutional Neural Networks with Octave Convolution. arXiv preprint arXiv:1904.05049, 2019.  
 9. KINGMA, Diederik P.; WELLING, Max. Auto-encoding variational bayes. arXiv preprint arXiv:1312.6114, 2013.  
 10. tensorflow pb and inference. https://blog.csdn.net/u014432647/article/details/75276718  
-
+11. GHIASI, Golnaz; LIN, Tsung-Yi; LE, Quoc V. Dropblock: A regularization method for convolutional networks. In: Advances in Neural Information Processing Systems. 2018. p. 10727-10737.  
+  
 
