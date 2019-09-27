@@ -1,14 +1,16 @@
 ```python
 #The methods to use dropblock and result
+#The methods to use dropblock and result
 import os
 import cv2
 import tensorflow as tf
 from dropblock import DropBlock2D
 from dropblock_white import DropBlock2D_white
 from dropblock_gray import DropBlock2D_gray
+from dropblock_gaussian import DropBlock2D_gaussian
 
-path = os.getcwd() + '/area_patch_test_equalizehist/'
-img = tf.reshape( tf.image.decode_bmp( tf.read_file(path + '25_d_14.bmp') ) , (1, 128, 128, 1))
+path = os.getcwd() + '/defect_ans_rescale_0820_gaussian_noise/'
+img = tf.reshape( tf.image.decode_bmp( tf.read_file(path + '26-1-d-area-29.bmp') ) , (1, 128, 128, 1))
 img = tf.cast(img, tf.float32)
 
 drop_block = DropBlock2D(keep_prob = 0.8, block_size=3)
@@ -25,12 +27,19 @@ img3 = drop_block_gray(img3, True)
 img3 = img3 * 127.5 + 127.5
 img3 = tf.reshape(tf.cast(img3, tf.uint8), (128, 128, 1))
 
-with tf.Session() as sess:
-    im1 = sess.run(img1)
-    im2 = sess.run(img2)
-    im3 = sess.run(img3)
+drop_block_gaussian = DropBlock2D_gaussian(keep_prob = 0.8, block_size=3)
+img4 = drop_block_gaussian(img, True)
+img4 = tf.reshape(tf.cast(img4, tf.uint8), (128, 128, 1))
 
-cv2.imwrite('im1.jpg', im1)
-cv2.imwrite('im2.jpg', im2)
-cv2.imwrite('im3.jpg', im3)
+
+with tf.Session() as sess:
+    img1 = sess.run(img1)
+    img2 = sess.run(img2)
+    img3 = sess.run(img3)
+    img4 = sess.run(img4)
+
+cv2.imwrite('img1.jpg', img1)
+cv2.imwrite('img2.jpg', img2)
+cv2.imwrite('img3.jpg', img3)
+cv2.imwrite('img4.jpg', img4)
 ```
