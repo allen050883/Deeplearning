@@ -1,6 +1,5 @@
 # VQVAE generate mnist image  
 ![alt text](https://github.com/allen050883/Python-for-Deep-learning/blob/master/tensorflow/VAE/VQVAE/image/1.jpg)
-![alt text](https://github.com/allen050883/Python-for-Deep-learning/blob/master/tensorflow/VAE/VQVAE/image/1.jpg)
 ![alt text](https://github.com/allen050883/Python-for-Deep-learning/blob/master/tensorflow/VAE/VQVAE/image/2.jpg)
 ![alt text](https://github.com/allen050883/Python-for-Deep-learning/blob/master/tensorflow/VAE/VQVAE/image/3.jpg)
 ![alt text](https://github.com/allen050883/Python-for-Deep-learning/blob/master/tensorflow/VAE/VQVAE/image/4.jpg)
