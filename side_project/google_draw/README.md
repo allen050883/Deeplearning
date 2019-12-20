@@ -3,7 +3,8 @@ This is a game for annual company party.
   
 # GUI  
 GUI designed by https://github.com/Maomaomaoing using tkinter package.  
-
+![alt text](https://github.com/allen050883/Python-for-Deep-learning/blob/master/side_project/google_draw/google_draw_game.png)
+  
 # dataset  
 The dataset source is from google quick draw.  
 webiste: https://quickdraw.withgoogle.com/data  
