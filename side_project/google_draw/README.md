@@ -1,5 +1,6 @@
 # googel draw game  
 This is a game for annual company party.  
+Download code: https://bitbucket.org/TsengPoYen/google_draw/downloads/  
   
 # GUI  
 GUI designed by https://github.com/Maomaomaoing using tkinter package.  
