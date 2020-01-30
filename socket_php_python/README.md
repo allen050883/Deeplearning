@@ -4,11 +4,11 @@ The source code from bitbucket:
 https://bitbucket.org/TsengPoYen/socket_php_python_connection/downloads/php_test.zip  
   
 ## step1  
-You can retrain the model to get the new one of mnist.pb.
-## step2
-Turn on the 2 windows cmd and input "python python_server.py", and the other input "php php_client.php".
-## result
-The php client sned the 9 filenames in "mnist_test". The server predict and then send the result to the client.  
+You can retrain the model to get the new one of mnist.pb  
+## step2  
+Turn on the 2 windows cmd and input "python python_server.py", and the other input "php php_client.php"  
+## result  
+The php client sned the 9 filenames in "mnist_test". The server predict and then send the result to the client  
   
 ## php client  
 ```php
