@@ -88,6 +88,6 @@ input_arrays = ["inputs"]
 output_arrays = ["result/prediction"]
 converter = tf.lite.TFLiteConverter.from_frozen_graph(graph_def_file, input_arrays, output_arrays)
 tflite_model = converter.convert()
-open("mnist.tflite", "wb").write(tflite_model)
+open("mnist_tf1_savepb.tflite", "wb").write(tflite_model)
           
     
