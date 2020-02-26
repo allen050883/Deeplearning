@@ -9,6 +9,14 @@ DecodeJpeg, Enter, Exit, LoopCond, Merge, ReadFile, Switch, TensorArrayGatherV3,
   
 #### It needs to back original method.  To see the "tf1_mnist.py"  
 #### Converter use "tf.lite.TFLiteConverter.from_frozen_graph" instead of "tf.lite.toco_convert"  
+```python
+graph_def_file = "mnist.pb"
+input_arrays = ["inputs"]
+output_arrays = ["result/prediction"]
+converter = tf.lite.TFLiteConverter.from_frozen_graph(graph_def_file, input_arrays, output_arrays)
+tflite_model = converter.convert()
+open("mnist_tf1_savepb.tflite", "wb").write(tflite_model)
+```
   
 # -----
 
