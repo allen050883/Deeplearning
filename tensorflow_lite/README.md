@@ -23,6 +23,6 @@ It can use subclassing.
 tf.saved_model.save(model, "./mnist_tf2/")    #This means "saving pb"
 converter = tf.lite.TFLiteConverter.from_saved_model("./mnist_tf2/")
 tflite_model = converter.convert()
-open('mnist_tf2_123.tflite', 'wb').write(tflite_model)  
+open('mnist_tf2_savepb.tflite', 'wb').write(tflite_model)
 ```
 
