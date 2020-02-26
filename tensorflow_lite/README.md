@@ -36,6 +36,7 @@ Solution 2: "h5 file" transfer to tflite
 The source code is in the "tf2_mnist_h5.py".  
 It can use sequential. (can't use on subclassing)  
 ```python
+#save h5
 model.save('mnist.h5')
 converter = tf.lite.TFLiteConverter.from_keras_model_file('mnist.h5')
 tflite_model = converter.convert()
