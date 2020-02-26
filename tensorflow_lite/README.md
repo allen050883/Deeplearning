@@ -13,3 +13,12 @@ Converter use "tf.lite.TFLiteConverter.from_frozen_graph" instead of "tf.lite.to
   
   
 ### Tf2 (tf 2.1.0)  
+Solution 1: "pb file" transfer to "tflite"  
+The source code is in the "tf2_mnist_pb.py".  
+```python  
+#save pb
+tf.saved_model.save(model, "./mnist_tf2/")
+converter = tf.lite.TFLiteConverter.from_saved_model("./mnist_tf2/")
+tflite_model = converter.convert()
+open('mnist_tf2_123.tflite', 'wb').write(tflite_model)  
+```
