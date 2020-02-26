@@ -12,6 +12,8 @@ It needs to back original method.  To see the "tf1_mnist.py"
 Converter use "tf.lite.TFLiteConverter.from_frozen_graph" instead of "tf.lite.toco_convert"  
   
   
+  
+  
 ### Tf2 (tf 2.1.0)  
 Solution 1: "pb file" transfer to "tflite"  
 The source code is in the "tf2_mnist_pb.py".  
