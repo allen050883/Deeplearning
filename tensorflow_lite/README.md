@@ -13,15 +13,24 @@ DecodeJpeg, Enter, Exit, LoopCond, Merge, ReadFile, Switch, TensorArrayGatherV3,
 # -----
 
 ### Tf2 (tf 2.1.0)  
-Solution 1: "pb file" transfer to "tflite"  
+Solution 1: "pb file" transfer to tflite  
 The source code is in the "tf2_mnist_pb.py".  
-  
-It can use subclassing.
+It can use subclassing. (not sure for sequential)
 ```python  
 #save pb
 tf.saved_model.save(model, "./mnist_tf2/")    #This means "saving pb"
 converter = tf.lite.TFLiteConverter.from_saved_model("./mnist_tf2/")
 tflite_model = converter.convert()
 open('mnist_tf2_savepb.tflite', 'wb').write(tflite_model)
+```  
+  
+Solution 2: "h5 file" transfer to tflite  
+The source code is in the "tf2_mnist_h5.py".  
+It can use sequential. (can't use on subclassing)  
+```python
+model.save('mnist.h5')
+converter = tf.lite.TFLiteConverter.from_keras_model_file('mnist.h5')
+tflite_model = converter.convert()
+open('mnist_tf2_saveh5.tflite', 'wb').write(tflite_model)
 ```
 
