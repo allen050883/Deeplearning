@@ -63,4 +63,4 @@ history = model.fit(x_train, y_train, batch_size=128, epochs=20, verbose=1,
 model.save('mnist.h5')
 converter = tf.lite.TFLiteConverter.from_keras_model_file('mnist.h5')
 tflite_model = converter.convert()
-open('mnist_saveh5.tflite', 'wb').write(tflite_model)
+open('mnist_tf2_saveh5.tflite', 'wb').write(tflite_model)
