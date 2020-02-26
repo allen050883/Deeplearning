@@ -17,8 +17,7 @@ converter = tf.lite.TFLiteConverter.from_frozen_graph(graph_def_file, input_arra
 tflite_model = converter.convert()
 open("mnist_tf1_savepb.tflite", "wb").write(tflite_model)
 ```
-  
-# -----
+***
 
 ### Tf2 (tf 2.1.0)  
 Solution 1: "pb file" transfer to tflite  
