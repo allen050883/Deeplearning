@@ -1,3 +1,8 @@
+#reference
+#https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2
+#https://arxiv.org/pdf/1204.0375.pdf
+
+
 import numpy as np
 from numpy.linalg import inv
 from numpy import dot, sum, tile, linalg
