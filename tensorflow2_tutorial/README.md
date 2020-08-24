@@ -2,6 +2,7 @@
   
 #### For code:  
 ```python
+import datetime
 model = create_model()
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
