@@ -1,13 +1,13 @@
 # Google Coral Accelerator Demo  
 ![image](https://github.com/allen050883/Deeplearning/blob/master/google_coral_demo/google_coral_resize.jpg)  
-### Support System
+#### Support System
 Connects via USB to any system running Debian Linux (including Raspberry Pi), macOS, or Windows 10.  
-### Support Tensorflow Lite  
+#### Support Tensorflow Lite  
 No need to build models from the ground up. TensorFlow Lite models can be compiled to run on the Edge TPU.  
-### Notice  
+#### Notice  
 Google coral Accelerator needs to use USB 3.0.  
   
-## Device and OS  
+### Device and OS  
 Rasberry Pi 4  
 Raspberry Pi OS (32-bit) with desktop (https://www.raspberrypi.org/downloads/raspberry-pi-os/)  
 
