@@ -7,9 +7,22 @@ No need to build models from the ground up. TensorFlow Lite models can be compil
 #### Notice  
 Google coral Accelerator needs to use USB 3.0.  
   
-### Device and OS  
+  
+## Device and OS  
 Rasberry Pi 4  
 Raspberry Pi OS (32-bit) with desktop (https://www.raspberrypi.org/downloads/raspberry-pi-os/)  
+  
+## Getting started with Google Coral Accelerator  
+#### Install edgetpu package and reboot  
+```bash
+echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install libedgetpu1-std
+sudo apt-get install python3-edgetpu
+sudo reboot now
+```
+
 
 https://www.pyimagesearch.com/2019/04/22/getting-started-with-google-corals-tpu-usb-accelerator/  
   
