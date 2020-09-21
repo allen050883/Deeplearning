@@ -102,12 +102,12 @@ python3 classify_image.py \
 	--output bird_result.bmp
 
 python3 object_detection.py \
-	--mode models/mobilenet_ssd_v2_face_quant_postprocess_edgetpu.tflite \
+	--mode models/ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite \
 	--input images/grace_hopper.bmp \
 	--output grace_hopper_result.bmp
 	
 python3 object_detection.py \
-	--mode models/mobilenet_ssd_v2_coco_quant_postprocess_edgetpu.tflite \
+	--mode models/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite \
 	--input images/cat.bmp \
 	--output cat_result.bmp
 ```
