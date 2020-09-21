@@ -66,8 +66,35 @@ $ python
 '2.12.2'
 ```
 If get error, please install numpy first: pip install -U numpy  
+#### Install packages
+```
+workon coral #check the virtual environment
+pip3 install "picamera[array]" # Raspberry Pi only
+pip3 install numpy
+pip3 install opencv-contrib-python==4.1.0.25
+pip3 install imutils
+pip3 install scikit-image
+pip3 install pillow
+```
+#### Install edgetpu example and chmod
+```
+sudo apt-get install edgetpu-examples
+sudo chmod a+w /usr/share/edgetpu/examples
+```
+#### check the all files  
+```
+workon coral
+cd /usr/share/edgetpu/examples
+tree --dirsfirst
+```
+#### try some examples  
+```
+python3 classify_image.py \
+	--mode models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
+	--label models/inat_bird_labels.txt \
+	--image images/parrot.jpg 
+```
+Reference:  
 https://www.pyimagesearch.com/2019/04/22/getting-started-with-google-corals-tpu-usb-accelerator/  
-  
-https://raspberrypi.stackexchange.com/questions/108740/error-environment-home-pi-virtualenvs-cv-does-not-contain-an-activate-scrip  
-  
+https://raspberrypi.stackexchange.com/questions/108740/error-environment-home-pi-virtualenvs-cv-does-not-contain-an-activate-scrip 
 https://stackoverflow.com/questions/20518632/importerror-numpy-core-multiarray-failed-to-import  
