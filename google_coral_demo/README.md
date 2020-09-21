@@ -63,7 +63,7 @@ workon coral
 $ python
 >>> import edgetpu
 >>> edgetpu.__version__
-'2.12.2'
+'2.14.1'
 ```
 If get error, please install numpy first: pip install -U numpy  
 #### Install packages
@@ -92,7 +92,24 @@ tree --dirsfirst
 python3 classify_image.py \
 	--mode models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
 	--label models/inat_bird_labels.txt \
-	--image images/parrot.jpg 
+	--image images/parrot.jpg \
+	--output parrot_result.jpg
+	
+python3 classify_image.py \
+	--mode models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
+	--label models/inat_bird_labels.txt \
+	--image images/bird.bmp \
+	--output bird_result.bmp
+
+python3 object_detection.py \
+	--mode models/mobilenet_ssd_v2_face_quant_postprocess_edgetpu.tflite \
+	--input images/grace_hopper.bmp \
+	--output grace_hopper_result.bmp
+	
+python3 object_detection.py \
+	--mode models/mobilenet_ssd_v2_coco_quant_postprocess_edgetpu.tflite \
+	--input images/cat.bmp \
+	--output cat_result.bmp
 ```
 Reference:  
 https://www.pyimagesearch.com/2019/04/22/getting-started-with-google-corals-tpu-usb-accelerator/  
