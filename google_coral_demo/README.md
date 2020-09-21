@@ -65,7 +65,7 @@ $ python
 >>> edgetpu.__version__
 '2.12.2'
 ```
-if get error, please install numpy first: pip install -U numpy  
+If get error, please install numpy first: pip install -U numpy  
 https://www.pyimagesearch.com/2019/04/22/getting-started-with-google-corals-tpu-usb-accelerator/  
   
 https://raspberrypi.stackexchange.com/questions/108740/error-environment-home-pi-virtualenvs-cv-does-not-contain-an-activate-scrip  
