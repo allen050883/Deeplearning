@@ -22,7 +22,15 @@ sudo apt-get install libedgetpu1-std
 sudo apt-get install python3-edgetpu
 sudo reboot now
 ```
-
+#### Setting virtual environment  
+```bash
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+sudo python3 get-pip.py
+sudo rm -rf ~/.cache/pip
+sudo pip install virtualenv virtualenvwrapper
+nano ~/.bashrc
+```
 
 https://www.pyimagesearch.com/2019/04/22/getting-started-with-google-corals-tpu-usb-accelerator/  
   
