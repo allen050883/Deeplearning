@@ -42,7 +42,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 source ~/.bashrc
 mkvirtualenv coral -p python3
 ```
-if get ERROR: Environment '/home/pi/.virtualenvs/cv' does not contain an activate script, please change the version:  
+If get ERROR: Environment '/home/pi/.virtualenvs/cv' does not contain an activate script, please change the version:  
 ```
 sudo pip3 install virtualenv virtualenvwrapper=='4.8.4'
 ```
@@ -65,6 +65,7 @@ $ python
 >>> edgetpu.__version__
 '2.12.2'
 ```
+if get error, please install numpy first: pip install -U numpy  
 https://www.pyimagesearch.com/2019/04/22/getting-started-with-google-corals-tpu-usb-accelerator/  
   
 https://raspberrypi.stackexchange.com/questions/108740/error-environment-home-pi-virtualenvs-cv-does-not-contain-an-activate-scrip  
