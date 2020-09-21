@@ -28,10 +28,43 @@ wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
 sudo python3 get-pip.py
 sudo rm -rf ~/.cache/pip
-sudo pip install virtualenv virtualenvwrapper
+sudo pip3 install virtualenv virtualenvwrapper
 nano ~/.bashrc
 ```
-
+#### add lines from bottom of this file
+```
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+```
+#### continue  
+```
+source ~/.bashrc
+mkvirtualenv coral -p python3
+```
+if get ERROR: Environment '/home/pi/.virtualenvs/cv' does not contain an activate script, please change the version:  
+```
+sudo pip3 install virtualenv virtualenvwrapper=='4.8.4'
+```
+#### show the edgetpu package place, and see the Line 7
+```
+dpkg -L python3-edgetpu
+#In the root dir: /usr/lib/python3/dist-packages/edgetpu
+```
+#### create a sym-link to that path from our virtual environment site-packages  
+```
+cd ~/.virtualenvs/coral/lib/python3.7/site-packages
+ln -s /usr/lib/python3/dist-packages/edgetpu/ edgetpu
+cd ~
+```
+#### check the virtual environment and edgetpu version  
+```
+workon coral
+$ python
+>>> import edgetpu
+>>> edgetpu.__version__
+'2.12.2'
+```
 https://www.pyimagesearch.com/2019/04/22/getting-started-with-google-corals-tpu-usb-accelerator/  
   
 https://raspberrypi.stackexchange.com/questions/108740/error-environment-home-pi-virtualenvs-cv-does-not-contain-an-activate-scrip  
