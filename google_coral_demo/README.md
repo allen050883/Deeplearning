@@ -31,13 +31,13 @@ sudo rm -rf ~/.cache/pip
 sudo pip3 install virtualenv virtualenvwrapper
 nano ~/.bashrc
 ```
-#### add lines from bottom of this file
+#### Add lines from bottom of this file
 ```
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 ```
-#### continue  
+#### Continue  
 ```
 source ~/.bashrc
 mkvirtualenv coral -p python3
@@ -46,18 +46,18 @@ if get ERROR: Environment '/home/pi/.virtualenvs/cv' does not contain an activat
 ```
 sudo pip3 install virtualenv virtualenvwrapper=='4.8.4'
 ```
-#### show the edgetpu package place, and see the Line 7
+#### Show the edgetpu package place, and see the Line 7
 ```
 dpkg -L python3-edgetpu
 #In the root dir: /usr/lib/python3/dist-packages/edgetpu
 ```
-#### create a sym-link to that path from our virtual environment site-packages  
+#### Create a sym-link to that path from our virtual environment site-packages  
 ```
 cd ~/.virtualenvs/coral/lib/python3.7/site-packages
 ln -s /usr/lib/python3/dist-packages/edgetpu/ edgetpu
 cd ~
 ```
-#### check the virtual environment and edgetpu version  
+#### Check the virtual environment and edgetpu version  
 ```
 workon coral
 $ python
