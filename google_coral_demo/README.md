@@ -93,13 +93,11 @@ python3 classify_image.py \
 	--mode models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
 	--label models/inat_bird_labels.txt \
 	--image images/parrot.jpg \
-	--output parrot_result.jpg
 	
 python3 classify_image.py \
 	--mode models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
 	--label models/inat_bird_labels.txt \
 	--image images/bird.bmp \
-	--output bird_result.bmp
 
 python3 object_detection.py \
 	--mode models/ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite \
