@@ -1,6 +1,5 @@
-## how to use tensorboard in tf2  
+## Tensorboard in tf2  
   
-#### For code:  
 ```python
 import datetime
 model = create_model()
@@ -18,6 +17,5 @@ model.fit(x=x_train,
           callbacks=[tensorboard_callback])
 ```
   
-#### For command:    
 tensorboard --logdir logs/fit --host IP --port 6006
 
