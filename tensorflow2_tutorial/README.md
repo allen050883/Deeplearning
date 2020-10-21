@@ -1,3 +1,11 @@
+## tf2 and tf.keras  
+#### 1. Sessions and eager execution  
+The model do not have to build the computation graph, it is easy to debug.  
+#### 2. Automatic differentiation  
+
+Model and layer subclassing
+Better multi-GPU/distributed training support
+
 ## Tensorboard in tf2  
   
 ```python
