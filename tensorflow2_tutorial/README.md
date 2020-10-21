@@ -4,9 +4,9 @@ The model do not have to build the computation graph, it is easy to debug.
 #### 2. Automatic differentiation  
 GradientTape and mode.fit to help automatic differentiation.  
 #### 3. Model and layer subclassing  
-Sequential  
-Function  
-Subclassing  
+*Sequential*  
+*Function*  
+*Subclassing*  
 Both the sequential and functional paradigms have been inside Keras for quite a while, but the subclassing feature is still unknown to many deep learning practitioners.  
 ```python
 # Subclassing
