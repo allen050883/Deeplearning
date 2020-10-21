@@ -8,7 +8,7 @@ Sequential
 Function  
 Subclassing  
 Both the sequential and functional paradigms have been inside Keras for quite a while, but the subclassing feature is still unknown to many deep learning practitioners.  
-```
+```python
 # Subclassing
 class LeNet(tf.keras.Model):
     def __init__(self):
