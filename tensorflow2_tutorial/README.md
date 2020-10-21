@@ -4,10 +4,11 @@ The model do not have to build the computation graph, it is easy to debug.
 #### 2. Automatic differentiation  
 GradientTape and mode.fit to help automatic differentiation.  
 #### 3. Model and layer subclassing  
+Both the sequential and functional paradigms have been inside Keras for quite a while, but the subclassing feature is still unknown to many deep learning practitioners.  
 *Sequential*  
 *Function*  
 *Subclassing*  
-Both the sequential and functional paradigms have been inside Keras for quite a while, but the subclassing feature is still unknown to many deep learning practitioners.  
+
 ```python
 # Subclassing
 class LeNet(tf.keras.Model):
@@ -37,9 +38,14 @@ lenet = LeNet()
 ```
 #### 4. Better multi-GPU/distributed training support  
 To quote the TensorFlow 2.0 documentation, “The MirroredStrategy supports synchronous distributed training on multiple GPUs on one machine”.  
-
+![image](https://github.com/allen050883/Deeplearning/blob/master/tensorflow2_tutorial/mirroredstrategy.png)  
 image source: https://jhui.github.io/2017/03/07/TensorFlow-GPU/  
-
+  
+  
+#### TF2 ecosystem  
+![image]https://github.com/allen050883/Deeplearning/blob/master/tensorflow2_tutorial/tf2_ecosystem.png  
+image source: https://www.pyimagesearch.com/2019/10/21/keras-vs-tf-keras-whats-the-difference-in-tensorflow-2-0/  
+  
 ## Tensorboard in tf2  
   
 ```python
