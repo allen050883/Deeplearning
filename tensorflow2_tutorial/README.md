@@ -36,6 +36,7 @@ class LeNet(tf.keras.Model):
 lenet = LeNet()
 ```
 #### 4. Better multi-GPU/distributed training support  
+To quote the TensorFlow 2.0 documentation, “The MirroredStrategy supports synchronous distributed training on multiple GPUs on one machine”.  
 
 image source: https://jhui.github.io/2017/03/07/TensorFlow-GPU/  
 
