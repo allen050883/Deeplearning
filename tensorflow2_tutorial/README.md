@@ -37,6 +37,8 @@ lenet = LeNet()
 ```
 #### 4. Better multi-GPU/distributed training support  
 
+image source: https://jhui.github.io/2017/03/07/TensorFlow-GPU/  
+
 ## Tensorboard in tf2  
   
 ```python
