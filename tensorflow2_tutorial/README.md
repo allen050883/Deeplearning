@@ -17,5 +17,7 @@ model.fit(x=x_train,
           callbacks=[tensorboard_callback])
 ```
   
+For command line,  
+```bash
 tensorboard --logdir logs/fit --host IP --port 6006
-
+```
