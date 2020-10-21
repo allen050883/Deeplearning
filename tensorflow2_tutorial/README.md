@@ -2,9 +2,12 @@
 #### 1. Sessions and eager execution  
 The model do not have to build the computation graph, it is easy to debug.  
 #### 2. Automatic differentiation  
-
-Model and layer subclassing
-Better multi-GPU/distributed training support
+GradientTape and mode.fit to help automatic differentiation.  
+#### 3. Model and layer subclassing  
+Sequential  
+Function  
+Subclassing  
+#### 4. Better multi-GPU/distributed training support  
 
 ## Tensorboard in tf2  
   
