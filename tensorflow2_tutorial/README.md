@@ -69,3 +69,13 @@ For command line,
 ```bash
 tensorboard --logdir logs/fit --host IP --port 6006
 ```
+
+
+# tf2 use keras plot model
+tf.keras.utils.plot_model(model, example.png, show_shapes=True)
+```
+pip install pydot
+pip install pydotplus
+sudo apt-get install graphviz
+pip install graphviz
+```
