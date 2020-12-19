@@ -47,7 +47,7 @@ image source: https://jhui.github.io/2017/03/07/TensorFlow-GPU/
 image source: https://www.pyimagesearch.com/2019/10/21/keras-vs-tf-keras-whats-the-difference-in-tensorflow-2-0/  
   
 ## Tensorboard in tf2  
-####   
+#### keras  
 ```python
 import datetime
 model = create_model()
@@ -64,10 +64,47 @@ model.fit(x=x_train,
           validation_data=(x_test, y_test), 
           callbacks=[tensorboard_callback])
 ```
-  
+#### tensorflow  
+```python
+import datetime as DT
+current_time = DT.datetime.now().strftime("%Y%m%d-%H%M%S")
+train_log_dir = 'logs/gradient_tape/' + current_time + '/train'
+test_log_dir = 'logs/gradient_tape/' + current_time + '/test'
+train_summary_writer = tf.summary.create_file_writer(train_log_dir)
+test_summary_writer = tf.summary.create_file_writer(test_log_dir)
+
+
+EPOCHS = 5
+for epoch in range(EPOCHS):
+    # Reset the metrics at the start of the next epoch
+    train_loss.reset_states()
+    train_accuracy.reset_states()
+    test_loss.reset_states()
+    test_accuracy.reset_states()
+
+    for images, labels in train_ds:
+        train_step(images, labels)
+    with train_summary_writer.as_default():
+        tf.summary.scalar('loss', train_loss.result(), step=epoch)
+        tf.summary.scalar('accuracy', train_accuracy.result(), step=epoch)
+
+    for test_images, test_labels in test_ds:
+        test_step(test_images, test_labels)
+    with test_summary_writer.as_default():
+        tf.summary.scalar('loss', test_loss.result(), step=epoch)
+        tf.summary.scalar('accuracy', test_accuracy.result(), step=epoch)
+
+    template = 'Epoch {}, Loss: {}, Accuracy: {}, Test Loss: {}, Test Accuracy: {}'
+    print(template.format(epoch+1,
+                        train_loss.result(),
+                        train_accuracy.result()*100,
+                        test_loss.result(),
+                        test_accuracy.result()*100))
+```
 For command line,  
 ```bash
 tensorboard --logdir logs/fit --host IP --port 6006
+tensorboard --logdir logs/gradient_tape --host IP --port 6006
 ```
 
 
