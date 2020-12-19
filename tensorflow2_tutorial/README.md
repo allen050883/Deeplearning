@@ -47,7 +47,7 @@ image source: https://jhui.github.io/2017/03/07/TensorFlow-GPU/
 image source: https://www.pyimagesearch.com/2019/10/21/keras-vs-tf-keras-whats-the-difference-in-tensorflow-2-0/  
   
 ## Tensorboard in tf2  
-  
+####   
 ```python
 import datetime
 model = create_model()
